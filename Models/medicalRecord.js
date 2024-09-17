@@ -13,6 +13,7 @@ const medicalRecordSchema = new Schema({
         ref: 'Doctor',
         required: true
     },
+    
     visitDate: {
         type: Date,
         default: Date.now
