@@ -99,10 +99,6 @@ exports.PatientDelete = async function (req, res, next) {
 // Update Patient by ID
 exports.PatientUpdate = async function (req, res, next) {
     try {
-
-        if (req.body.password) {
-            req.body.password = await bcrypt.hash(req.body.password, 10);
-        }
         let updatedPatient = await PATIENT.findByIdAndUpdate(req.params.id, req.body, { new: true });
 
         res.status(200).json({

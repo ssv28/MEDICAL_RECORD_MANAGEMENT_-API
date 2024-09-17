@@ -8,20 +8,20 @@ const medicalRecordSchema = new Schema({
         ref: 'Patient',
         required: true
     },
-    doctor: { 
+    doctor: {
         type: Schema.Types.ObjectId,
-         ref: 'Doctor', 
-         required: true 
-        },
-    visitDate: { 
-        type: Date, 
+        ref: 'Doctor',
+        required: true
+    },
+    visitDate: {
+        type: Date,
         default: Date.now
-     },
+    },
 
     diagnosis: String,
 
     treatment: String,
-    
+
     prescriptions: [String]
 
 }, { timestamps: true });
