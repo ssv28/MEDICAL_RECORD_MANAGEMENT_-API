@@ -9,7 +9,7 @@ const medicalRecordSchema = new Schema({
         required: true
     },
     doctor: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         ref: 'Doctor',
         required: true
     },
@@ -23,7 +23,7 @@ const medicalRecordSchema = new Schema({
 
     treatment: String,
 
-    prescriptions: [String]
+    prescriptions: [String]   //represent the name of a medication or a treatment method
 
 }, { timestamps: true });
 

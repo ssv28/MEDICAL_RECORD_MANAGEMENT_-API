@@ -24,7 +24,7 @@ exports.DoctorCreate = async function (req, res, next) {
 // Find All DOCTOR
 exports.FindData = async function (req, res, next) {
     try {
-        let DoctorFind = await DOCTOR.find();
+        let DoctorFind = await DOCTOR.find().populate("patients");
 
         res.status(200).json({
             status: 'Success',
